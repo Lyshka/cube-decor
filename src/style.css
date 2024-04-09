@@ -18,7 +18,7 @@
   }
 
   button {
-    @apply transition-all duration-300 rounded-[5px] flex justify-center items-center;
+    @apply transition-all duration-300 rounded-[5px] flex justify-center items-center text-center;
   }
 
   a {
