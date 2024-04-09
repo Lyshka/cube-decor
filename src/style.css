@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth font-Montserrat text-[#333333] overflow-x-hidden;
+  }
+
+  .container-main {
+    @apply max-w-[1368px] w-full xl:px-0 px-2.5;
+  }
+
+  input {
+    @apply ring-0 outline-none;
+  }
+
+  button {
+    @apply transition-all duration-300 rounded-[5px] flex justify-center items-center;
+  }
+
+  a {
+    @apply transition-all duration-300;
+  }
+
+  h2,
+  h4 {
+    @apply text-[40px] leading-[52px];
+  }
+
+  h2 span,
+  h4 span {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .shadow-button-main {
+    box-shadow: 0px 5px 0px 0px #960303e5;
+  }
+
+  .linear-gradient-gray {
+    background: linear-gradient(98.57deg, #e8ebf0 5.78%, #e7edf9 76.65%);
+  }
+
+  .shadow-main {
+    box-shadow: 0px 2px 10px 0px #00000026;
+  }
+
+  .title-card-options span {
+    @apply font-normal;
+  }
+}
