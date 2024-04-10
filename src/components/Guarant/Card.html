@@ -1,0 +1,101 @@
+<div
+  class="linear-gradient-gray pl-[30px] shadow-main h-[490px] rounded-lg flex justify-center items-center"
+>
+  <div class="w-full">
+    <div class="flex justify-between w-full items-center pr-[20.8px]">
+      <p class="text-[22px] uppercase leading-[28.6px] font-semibold">
+        {=$name}
+      </p>
+
+      <div
+        class="border-[5px] border-white rotate-[-6.43deg] rounded-[5px] p-[1px]"
+      >
+        <div
+          class="w-[101px] h-[61px] rounded-[5px] bg-[#1D9ADD] flex justify-center items-center flex-col gap-[1px] text-white text-center"
+        >
+          <p class="leading-[33.8px] text-[26px] font-extrabold">
+            {=$guarant} лет
+          </p>
+
+          <p class="text-base leading-[20.8px]">гарантии</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-[8.38px] mb-[50px] space-y-[27px] relative">
+      <div class="space-y-2.5">
+        <p class="flex items-center gap-1.5 text-base leading-[20.8px]">
+          Ширина профиля: <span class="font-semibold">{=$width} мм</span>
+        </p>
+
+        <p class="flex items-center gap-1.5 text-base leading-[20.8px]">
+          Количество камер: <span class="font-semibold">{=$countCamera}</span>
+        </p>
+
+        <div class="flex items-center gap-1.5 text-base leading-[20.8px]">
+          фурнитура:
+          <img class="w-[90px] h-6" src="{=$logo}" alt="Логотип гарантии" />
+          <span class="font-semibold">{=$country}</span>
+        </div>
+
+        <p class="flex items-center gap-1.5 text-base leading-[20.8px]">
+          Толщина стеклопакета: <span class="font-semibold">{=$weight} мм</span>
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="space-y-2">
+          <p class="text-base font-semibold leading-[20.8px]">Теплоизоляция:</p>
+
+          <div class="bg-[#D9D9D9] h-2.5 w-[200px] rounded-[10px]">
+            <div
+              style="width: {=$thermal}px;"
+              class="h-full linear-gradient-green rounded-[10px]"
+            >
+              &nbsp;
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <p class="text-base font-semibold leading-[20.8px]">Шумоизоляция:</p>
+
+          <div class="bg-[#D9D9D9] h-2.5 w-[200px] rounded-[10px]">
+            <div
+              style="width: {=$insulation}px;"
+              class="h-full linear-gradient-green rounded-[10px]"
+            >
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="{=$img}"
+        alt="Профиль фурнитуры"
+        class="absolute right-[5px] -bottom-[26px] w-[150px] h-[240px] object-cover"
+      />
+    </div>
+
+    <div class="flex justify-between items-center pr-5">
+      <div>
+        <p class="text-base leading-[20.8px]">Стоимость за м2</p>
+        <p
+          class="flex gap-2 items-end leading-[20.8px] text-base font-semibold text-primary"
+        >
+          от
+          <span class="leading-[39px] text-[30px] relative top-1"
+            >{=$price} Br</span
+          >
+        </p>
+      </div>
+
+      <button
+        class="leading-[23.4px] font-semibold hover:opacity-75 text-lg text-white w-[201px] h-[60px] bg-secondary"
+      >
+        Заказать
+      </button>
+    </div>
+  </div>
+</div>

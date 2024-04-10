@@ -15,30 +15,34 @@
   >
     <div class="container-main mx-auto flex items-center">
       <div class="relative -left-[87px]">
-        <div
-          class="bg-[url('https://pvh-okno.by/assets/image/img/laminator/textures/10.jpg')] w-[300px] bg-center min-h-full"
-        ></div>
+        <div class="relative">
+          <div
+            id="changeBackImg"
+            class="bg-[#fa4378] absolute min-h-full w-[350px] left-[145px]"
+          >
+            &nbsp;
+          </div>
+          <img
+            class="min-h-full object-cover relative z-[1]"
+            src="laminationTemplate.webp"
+            alt="Ламинация"
+          />
+        </div>
 
         <img
-          class="min-h-full object-cover"
-          src="laminationTemplate.webp"
-          alt="Ламинация"
-        />
-
-        <img
-          src="knob.webp"
+          src="http://localhost:5173/knob8.webp"
           alt="Ручка"
-          class="absolute top-0 translate-x-full left-8"
+          class="absolute top-0 translate-x-full w-[126.39px] h-[312.39px] left-8 changeKnob transition-all duration-500 transform -scale-x-100"
         />
 
         <img
-          src="knob.webp"
+          src="http://localhost:5173/knob8.webp"
           alt="Ручка 2"
-          class="absolute top-0 translate-x-full left-52"
+          class="absolute top-0 translate-x-full w-[126.39px] h-[312.39px] left-52 changeKnob transition-all duration-500 transform -scale-x-100"
         />
       </div>
 
-      <div class="max-w-[566px] space-y-[60px] relative -left-[198.52px]">
+      <div class="max-w-[566px] space-y-[60px] relative -left-[198.52px] z-[1]">
         <p class="leading-[33.8px] text-[26px] font-semibold text-white">
           Проявите свою индивидуальность, выбрав подходящее цветовое решение
         </p>
@@ -63,8 +67,150 @@
           alt="lgHausysLogo"
         />
       </div>
+
+      <div class="grid grid-cols-4 gap-3.5">
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Махагон"
+          img="color1.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Дуб"
+          img="color2.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Темный дуб"
+          img="color3.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Орех"
+          img="color4.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Светлый дуб"
+          img="color5.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Зимний дуглас"
+          img="color6.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Береза розовая"
+          img="color7.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Орегон"
+          img="color8.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Светло-серый"
+          img="color9.webp"
+        />
+        <load
+          src="src/components/Lamination/selectBack.html"
+          title="Серый агат"
+          img="color10.webp"
+        />
+
+        <div
+          role="button"
+          data-color="#fa4378"
+          class="flex flex-col items-center gap-1.5 selectBack transition duration-300 group w-[100px] h-[100px] rounded-full active"
+        >
+          <div
+            class="rounded-full group-hover:outline p-[0.5px] colorSelect group-hover:outline-primary group-hover:outline-4 bg-[#fa4378] h-full w-full flex-shrink-0"
+          >
+            &nbsp;
+          </div>
+
+          <span class="text-base font-semibold text-center leading-[20.8px]"
+            >Розовый</span
+          >
+        </div>
+      </div>
     </div>
 
-    <div></div>
+    <div
+      class="shadow-main bg-[#F8F8F8] rounded-lg px-5 py-[22px] flex items-start gap-5 justify-between"
+    >
+      <div class="space-y-[27px]">
+        <p class="leading-[33.8px] text-[26px] font-semibold">Ручки</p>
+
+        <img
+          class="w-[81px] h-[34px]"
+          src="optionsLogoRoto.webp"
+          alt="LogoRoto"
+        />
+      </div>
+
+      <div class="grid grid-cols-4 gap-3.5">
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Белый"
+          img="knob1.webp"
+        />
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Титан"
+          img="knob2.webp"
+        />
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Серебро"
+          img="knob3.webp"
+        />
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Шампань"
+          img="knob4.webp"
+        />
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Коричневый"
+          img="knob5.webp"
+        />
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Золото"
+          img="knob6.webp"
+        />
+        <load
+          src="src/components/Lamination/SelectKnob.html"
+          title="Черный"
+          img="knob7.webp"
+        />
+
+        <div
+          role="button"
+          data-color="knob8.webp"
+          class="flex flex-col active items-center gap-1.5 selectKnob transition duration-300 group rounded-full"
+        >
+          <div
+            style="
+              background-image: url('knob8.webp');
+              background-repeat: no-repeat;
+              background-position-x: 20px;
+              background-position-y: -20px;
+              background-size: cover;
+            "
+            class="w-[100px] h-[100px] colorSelect group-hover:outline-primary group-hover:outline-4 flex-shrink-0 rounded-full group-hover:outline"
+          >
+            &nbsp;
+          </div>
+
+          <span class="text-base font-semibold text-center leading-[20.8px]"
+            >Темное золота</span
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </section>

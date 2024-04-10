@@ -1,0 +1,22 @@
+<div
+  role="button"
+  data-color="{=$img}"
+  class="flex flex-col items-center gap-1.5 selectKnob transition duration-300 group rounded-full"
+>
+  <div
+    style="
+      background-image: url({=$img});
+      background-repeat: no-repeat;
+      background-position-x: 20px;
+      background-position-y: -20px;
+      background-size: cover;
+    "
+    class="w-[100px] h-[100px] colorSelect group-hover:outline-primary group-hover:outline-4 flex-shrink-0 rounded-full group-hover:outline"
+  >
+    &nbsp;
+  </div>
+
+  <span class="text-base font-semibold text-center leading-[20.8px]"
+    >{=$title}</span
+  >
+</div>

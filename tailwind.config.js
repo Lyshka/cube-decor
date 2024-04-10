@@ -17,6 +17,9 @@ export default {
           DEFAULT: "#868686F",
         },
       },
+      screens: {
+        custom: "1700px",
+      },
     },
   },
   plugins: [],
