@@ -98,4 +98,8 @@
       rgba(76, 176, 81, 0.87) 100%
     );
   }
+
+  .shadow-certificate {
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.2));
+  }
 }

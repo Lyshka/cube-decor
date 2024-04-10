@@ -4,9 +4,70 @@
     <span>необходимыми сертификатами</span>
   </h4>
 
-  <div id="sliderCertificates">
-    <div class="swiper-wrapper">
-        <load />
+  <div class="flex items-center gap-6 overflow-hidden h-full">
+    <button
+      class="bg-primary rounded-full w-[46px] h-[46px] flex-shrink-0 prevCertificates flex justify-center items-center"
+      type="button"
+    >
+      <svg
+        width="11"
+        height="20"
+        viewBox="0 0 11 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.311598 10.7112L9.31316 19.6878C9.60809 19.9817 10.0856 19.9812 10.38 19.6863C10.6742 19.3914 10.6735 18.9136 10.3785 18.6194L1.91272 10.1771L10.3788 1.73477C10.6737 1.44054 10.6745 0.9631 10.3803 0.668133C10.2327 0.520261 10.0394 0.446342 9.84598 0.446342C9.65314 0.446342 9.4605 0.519766 9.3132 0.666612L0.311598 9.64302C0.169564 9.78434 0.0898438 9.97669 0.0898438 10.1771C0.0898438 10.3775 0.169777 10.5696 0.311598 10.7112Z"
+          fill="white"
+        />
+      </svg>
+    </button>
+
+    <div id="sliderCertificates" class="w-[640px] px-4 -mx-4 py-4 overflow-hidden">
+      <div class="swiper-wrapper">
+        <load
+          src="src/components/Certificates/Slide.html"
+          img="certificate1.webp"
+        />
+        <load
+          src="src/components/Certificates/Slide.html"
+          img="certificate2.webp"
+        />
+        <load
+          src="src/components/Certificates/Slide.html"
+          img="certificate3.webp"
+        />
+        <load
+          src="src/components/Certificates/Slide.html"
+          img="certificate4.webp"
+        />
+        <load
+          src="src/components/Certificates/Slide.html"
+          img="certificate5.webp"
+        />
+        <load
+          src="src/components/Certificates/Slide.html"
+          img="certificate6.webp"
+        />
+      </div>
     </div>
+
+    <button
+      class="bg-primary rounded-full w-[46px] h-[46px] flex-shrink-0 nextCertificates flex justify-center items-center"
+      type="button"
+    >
+      <svg
+        width="11"
+        height="20"
+        viewBox="0 0 11 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.3779 9.64304L1.37629 0.666421C1.08136 0.372481 0.603883 0.372974 0.309447 0.667941C0.0152595 0.962836 0.0160005 1.4406 0.310966 1.73479L8.77674 10.1771L0.310684 18.6194C0.0157538 18.9137 0.0149737 19.3911 0.309161 19.6861C0.456751 19.8339 0.650093 19.9079 0.843471 19.9079C1.03632 19.9079 1.22895 19.8344 1.37626 19.6876L10.3779 10.7112C10.5199 10.5699 10.5996 10.3775 10.5996 10.1771C10.5996 9.97675 10.5197 9.78465 10.3779 9.64304Z"
+          fill="white"
+        />
+      </svg>
+    </button>
   </div>
 </section>
