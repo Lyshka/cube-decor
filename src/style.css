@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#sliderGallery .swiper-pagination .swiper-pagination-bullet {
+  @apply !w-3.5 !h-3.5 bg-primary/25 transition-all rounded-full;
+}
+
+#sliderGallery .swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-primary;
+}
+
 @layer base {
   html {
     @apply scroll-smooth font-Montserrat text-[#333333] overflow-x-hidden;
@@ -101,5 +109,17 @@
 
   .shadow-certificate {
     filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.2));
+  }
+
+  .shadow-button-price-standart {
+    filter: drop-shadow(0px 5px 0px 0px #b84d00);
+  }
+
+  .select-gallerys-button {
+    @apply hover:bg-primary hover:text-white rounded-[5px] h-[60px] w-full text-lg font-medium leading-[23.4px] text-[#868686] outline outline-primary outline-1;
+  }
+
+  .select-gallerys-button.active {
+    @apply bg-primary text-white;
   }
 }
