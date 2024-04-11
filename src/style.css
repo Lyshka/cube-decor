@@ -122,4 +122,8 @@
   .select-gallerys-button.active {
     @apply bg-primary text-white;
   }
+
+  .sliderGallery.active {
+    @apply flex;
+  }
 }

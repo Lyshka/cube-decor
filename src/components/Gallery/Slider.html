@@ -1,6 +1,6 @@
-<div class="flex items-center gap-[58px]">
+<div id="{=$id}" class="items-center gap-[58px] sliderGallery w-full hidden {=$class}">
   <button
-    class="bg-primary rounded-full w-[55px] h-[55px] flex-shrink-0 prevGallery flex justify-center items-center"
+    class="bg-primary rounded-full w-[55px] h-[55px] flex-shrink-0 prev{=$id} flex justify-center items-center"
     type="button"
   >
     <svg
@@ -17,7 +17,7 @@
     </svg>
   </button>
 
-  <div class="flex-1 flex flex-col w-full overflow-hidden space-y-10" id="sliderGallery">
+  <div class="flex-1 flex flex-col w-full overflow-hidden space-y-10" id="slider{=$id}">
     <div class="swiper-wrapper w-full">
       <div class="swiper-slide !flex justify-center gap-5">
         <img
@@ -146,11 +146,11 @@
       </div>
     </div>
 
-    <div class="swiper-pagination flex gap-2.5 mx-auto"></div>
+    <div class="swiper-pagination-{=$id} flex gap-2.5 mx-auto"></div>
   </div>
 
   <button
-    class="bg-primary rounded-full w-[55px] h-[55px] flex-shrink-0 nextGallery flex justify-center items-center"
+    class="bg-primary rounded-full w-[55px] h-[55px] flex-shrink-0 next{=$id} flex justify-center items-center"
     type="button"
   >
     <svg

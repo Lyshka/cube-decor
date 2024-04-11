@@ -1,0 +1,84 @@
+<section
+  class="fixed bg-black/50 backdrop-blur-2xl w-full h-full z-[2] flex justify-center items-center"
+>
+  <div
+    class="max-w-[1020px] w-full h-[600px] bg-[#F8F8F8] relative rounded-[10px] pt-[100px] pl-[60px] overflow-hidden"
+  >
+    <button class="absolute top-6 right-6 p-4 -m-4" type="button">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_2360_452)">
+          <path
+            d="M12 12L22 22M12 12L2 2M12 12L2 22M12 12L22 2"
+            stroke="#333333"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_2360_452">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </button>
+
+    <div class="space-y-5">
+      <p class="leading-[39px] font-semibold text-[30px]">
+        Не можем отпустить Вас с пустыми руками!
+      </p>
+
+      <p class="leading-[24.38px] font-light text-xl">
+        Получите прямо сейчас полезное пособие:<br /><span class="font-medium"
+          >«Как сэкономить на окнах не теряя в качестве»</span
+        >
+      </p>
+
+      <form class="space-y-5">
+        <input
+          class="bg-white rounded-[14px] w-[416px] h-[60px] p-5 placeholder:text-[#A59D9D] phone-input"
+          placeholder="Телефон"
+          type="tel"
+        />
+
+        <div></div>
+
+        <div class="flex items-center gap-2.5">
+          <input
+            class="border border-[#004dd3] rounded-sm h-[18px] w-[18px]"
+            id="conf"
+            name="conf"
+            type="checkbox"
+          />
+
+          <label
+            class="text-[#4C4C4C] text-sm leading-[17.07px] font-light"
+            for="conf"
+            >Соглашаюсь с
+            <a class="underline" href=""
+              >Политикой обработки персональных данных</a
+            ></label
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="leading-[24.38px] font-semibold text-xl rounded-[14px] bg-secondary text-white h-[60px] w-[288px]"
+        >
+          Получить пособие
+        </button>
+      </form>
+    </div>
+
+    <img
+      class="absolute right-0 bottom-[51px] w-[470px] h-[402px]"
+      src="notExitMagazine.webp"
+      alt="Журнал"
+    />
+  </div>
+</section>
