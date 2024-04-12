@@ -1,25 +1,41 @@
-<section
-  class="rounded-lg linear-gradient-gray shadow-main px-[50px] py-[60px] mx-auto container-main relative"
->
-  <div class="w-[686px] space-y-10">
-    <div class="space-y-5">
-      <p class="font-semibold text-[40px] leading-[52px]">Остались вопросы?</p>
+<section class="mx-auto container-main relative">
+  <div
+    class="rounded-lg linear-gradient-gray shadow-main xl:px-[50px] px-2.5 xl:py-[60px] py-5"
+  >
+    <div class="xl:w-[686px] w-full xl:space-y-10 space-y-5">
+      <div class="xl:space-y-5 space-y-2.5">
+        <p
+          class="font-semibold xl:text-[40px] text-[22px] xl:leading-[52px] leading-[28.6px]"
+        >
+          Остались вопросы?
+        </p>
 
-      <p class="text-[26px] leading-[33.8px] font-light">
-        Оставьте заявку и наш менеджер свяжется с Вами в течение 15 мин и
-        проконсультирует Вас
-      </p>
+        <p
+          class="xl:text-[26px] text-lg xl:leading-[33.8px] leading-[23.4px] font-light"
+        >
+          Оставьте заявку и наш менеджер свяжется с Вами в течение 15 мин и
+          проконсультирует Вас
+        </p>
+      </div>
+
+      <div class="flex xl:flex-row flex-col xl:gap-0 gap-5 xl:justify-between">
+        <load src="src/components/QuestForm/Form.html" />
+        <load src="src/components/QuestForm/Social.html" />
+      </div>
     </div>
 
-    <div class="flex justify-between">
-      <load src="src/components/QuestForm/Form.html" />
-      <load src="src/components/QuestForm/Social.html" />
+    <div class="h-[215px] xl:hidden block">
+      <img
+        src="questFormWindow.webp"
+        alt="Окно"
+        class="h-[280px] object-contain relative mx-auto"
+      />
     </div>
   </div>
 
   <img
     src="questFormWindow.webp"
     alt="Окно"
-    class="-bottom-[71px] -right-[105px] absolute"
+    class="-bottom-[71px] -right-[105px] absolute xl:block hidden"
   />
 </section>

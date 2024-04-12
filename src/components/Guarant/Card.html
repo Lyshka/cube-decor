@@ -1,29 +1,39 @@
 <div
-  class="linear-gradient-gray pl-[30px] shadow-main h-[490px] rounded-lg flex justify-center items-center"
+  class="linear-gradient-gray xl:pl-[30px] xl:px-0 px-2.5 xl:pb-0 pb-5 xl:pt-0 pt-[30px] shadow-main xl:h-[490px] h-[441px] rounded-lg flex justify-center items-center relative"
 >
   <div class="w-full">
-    <div class="flex justify-between w-full items-center pr-[20.8px]">
-      <p class="text-[22px] uppercase leading-[28.6px] font-semibold">
+    <div class="flex justify-between w-full items-center xl:pr-[20.8px]">
+      <p
+        class="xl:text-[22px] text-xl uppercase xl:leading-[28.6px] leading-[26px] font-semibold"
+      >
         {=$name}
       </p>
 
       <div
-        class="border-[5px] border-white rotate-[-6.43deg] rounded-[5px] p-[1px]"
+        class="xl:border-[5px] border-[3px] border-white xl:rotate-[-6.43deg] rotate-[-6deg] rounded-[5px] p-[1px]"
       >
         <div
-          class="w-[101px] h-[61px] rounded-[5px] bg-[#1D9ADD] flex justify-center items-center flex-col gap-[1px] text-white text-center"
+          class="xl:w-[101px] w-[68.72px] xl:h-[61px] h-[41.5px] rounded-[5px] bg-[#1D9ADD] flex justify-center items-center flex-col xl:gap-[1px] gap-[0.74px] text-white text-center"
         >
-          <p class="leading-[33.8px] text-[26px] font-extrabold">
+          <p
+            class="xl:leading-[33.8px] leading-[23.4px] xl:text-[26px] text-lg font-extrabold"
+          >
             {=$guarant} лет
           </p>
 
-          <p class="text-base leading-[20.8px]">гарантии</p>
+          <p
+            class="xl:text-base text-[11px] xl:leading-[20.8px] leading-[14.3px] font-semibold"
+          >
+            гарантии
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="mt-[8.38px] mb-[50px] space-y-[27px] relative">
-      <div class="space-y-2.5">
+    <div
+      class="xl:mt-[8.38px] mt-2.5 xl:mb-[50px] mb-[46px] xl:space-y-[27px] space-y-5 xl:relative"
+    >
+      <div class="xl:space-y-2.5 space-y-1">
         <p class="flex items-center gap-1.5 text-base leading-[20.8px]">
           Ширина профиля: <span class="font-semibold">{=$width} мм</span>
         </p>
@@ -34,7 +44,11 @@
 
         <div class="flex items-center gap-1.5 text-base leading-[20.8px]">
           фурнитура:
-          <img class="w-[90px] h-6" src="{=$logo}" alt="Логотип гарантии" />
+          <img
+            class="xl:w-[90px] w-[75px] xl:h-6 h-5"
+            src="{=$logo}"
+            alt="Логотип гарантии"
+          />
           <span class="font-semibold">{=$country}</span>
         </div>
 
@@ -43,11 +57,13 @@
         </p>
       </div>
 
-      <div class="space-y-4">
-        <div class="space-y-2">
+      <div class="xl:space-y-4 space-y-2.5">
+        <div class="xl:space-y-2 space-y-1">
           <p class="text-base font-semibold leading-[20.8px]">Теплоизоляция:</p>
 
-          <div class="bg-[#D9D9D9] h-2.5 w-[200px] rounded-[10px]">
+          <div
+            class="bg-[#D9D9D9] h-2.5 xl:w-[200px] xl:max-w-full max-w-[280px] rounded-[10px]"
+          >
             <div
               style="width: {=$thermal}px;"
               class="h-full linear-gradient-green rounded-[10px]"
@@ -57,10 +73,12 @@
           </div>
         </div>
 
-        <div class="space-y-2">
+        <div class="xl:space-y-2 space-y-1">
           <p class="text-base font-semibold leading-[20.8px]">Шумоизоляция:</p>
 
-          <div class="bg-[#D9D9D9] h-2.5 w-[200px] rounded-[10px]">
+          <div
+            class="bg-[#D9D9D9] h-2.5 xl:w-[200px] xl:max-w-full max-w-[280px] rounded-[10px]"
+          >
             <div
               style="width: {=$insulation}px;"
               class="h-full linear-gradient-green rounded-[10px]"
@@ -74,25 +92,30 @@
       <img
         src="{=$img}"
         alt="Профиль фурнитуры"
-        class="absolute right-[5px] -bottom-[26px] w-[150px] h-[240px] object-cover"
+        class="absolute xl:right-[5px] right-6 xl:-bottom-[26px] bottom-[25px] xl:w-[150px] w-[92px] xl:h-[240px] h-[143px] object-cover"
       />
     </div>
 
-    <div class="flex justify-between items-center pr-5">
+    <div
+      class="flex xl:w-auto w-[150px] xl:justify-between xl:items-center xl:flex-row flex-col xl:gap-0 gap-3.5 xl:pr-5"
+    >
       <div>
-        <p class="text-base leading-[20.8px]">Стоимость за м2</p>
+        <p class="xl:text-base text-sm xl:leading-[20.8px] leading-[18.2px]">
+          Стоимость за м2
+        </p>
         <p
-          class="flex gap-2 items-end leading-[20.8px] text-base font-semibold text-primary"
+          class="flex xl:gap-2 gap-1 items-end leading-[20.8px] text-base font-semibold text-primary"
         >
           от
-          <span class="leading-[39px] text-[30px] relative top-1"
+          <span
+            class="xl:leading-[39px] leading-[31.2px] xl:text-[30px] text-2xl relative top-1"
             >{=$price} Br</span
           >
         </p>
       </div>
 
       <button
-        class="leading-[23.4px] font-semibold hover:opacity-75 text-lg text-white w-[201px] h-[60px] bg-secondary"
+        class="xl:leading-[23.4px] leading-[20.8px] font-semibold hover:opacity-75 xl:text-lg text-base text-white xl:w-[201px] w-full xl:h-[60px] h-10 bg-secondary"
       >
         Заказать
       </button>

@@ -5,3 +5,4 @@ import "./script/sliderCertificates";
 import "./script/sliderReview";
 import "./script/telInput";
 import "./script/sliderGallery";
+import "./script/notExit";

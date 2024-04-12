@@ -12,6 +12,10 @@
   @apply bg-primary;
 }
 
+#sliderReviews .swiper-slide-active {
+  @apply xl:!scale-100 !scale-125;
+}
+
 @layer base {
   html {
     @apply scroll-smooth font-Montserrat text-[#333333] overflow-x-hidden;
@@ -35,7 +39,7 @@
 
   h2,
   h4 {
-    @apply font-light text-[40px] leading-[52px];
+    @apply font-light xl:text-[40px] text-[22px] xl:leading-[52px] leading-[28.6px];
   }
 
   h2 span,
@@ -125,5 +129,9 @@
 
   .sliderGallery.active {
     @apply flex;
+  }
+
+  #modalNotExit.active {
+    @apply z-[2] h-full opacity-100;
   }
 }
