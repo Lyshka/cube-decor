@@ -1,0 +1,55 @@
+<div
+  class="w-full bg-[#F8F8F8] rounded-2xl h-full flex-col !flex justify-center items-center gap-[21px] px-[50px] swiper-slide"
+>
+  <div class="space-y-[30px] w-full">
+    <load
+      src="src/components/Quiz/components/Loader.html"
+      step="3"
+      width="50"
+    />
+    <load
+      src="src/components/Quiz/components/Title.html"
+      questNumber="3"
+      quest="Укажите примерные размеры изделий"
+    />
+
+    <load src="src/components/Quiz/components/Dimension/Layout.html" />
+  </div>
+
+  <div class="flex justify-between items-center w-full">
+    <p class="text-[#4C4C4C] leading-[18.2px] text-sm font-light">
+      <span class="font-medium">Выберите вариант ответа</span> и нажмите кнопку
+      “Далее”
+    </p>
+
+    <div class="flex items-center gap-[50px]">
+      <button
+        id="prevDimension"
+        class="flex text-secondary gap-2.5 items-center text-lg font-medium leading-[21.94px]"
+      >
+        <svg
+          width="7"
+          height="16"
+          viewBox="0 0 7 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.147689 8.41163L6.14267 15.3304C6.3391 15.5569 6.65709 15.5565 6.85319 15.3292C7.04911 15.1019 7.04862 14.7337 6.85217 14.5069L1.21402 7.99998L6.85236 1.49305C7.04879 1.26628 7.0493 0.898292 6.85338 0.670946C6.75508 0.556973 6.62632 0.5 6.49753 0.5C6.3691 0.5 6.24083 0.55659 6.1427 0.669772L0.147689 7.58835C0.0530951 7.69728 6.69175e-07 7.84553 6.55673e-07 7.99998C6.42171e-07 8.15442 0.0532362 8.30249 0.147689 8.41163Z"
+            fill="#F23232"
+          />
+        </svg>
+
+        Назад
+      </button>
+
+      <button
+        id="nextDimension"
+        type="button"
+        class="w-[216px] h-[60px] bg-secondary text-white leading-[23.4px] text-lg hover:opacity-75"
+      >
+        Далее
+      </button>
+    </div>
+  </div>
+</div>

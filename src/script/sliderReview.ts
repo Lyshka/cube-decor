@@ -27,6 +27,7 @@ const sliderReviews = () => {
       },
       0: {
         slidesPerView: 3,
+        allowTouchMove: true,
         coverflowEffect: {
           rotate: 0,
           stretch: -15,

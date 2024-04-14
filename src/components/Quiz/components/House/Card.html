@@ -1,0 +1,43 @@
+<div
+  role="button"
+  class="flex selectHouse group flex-col items-center gap-5 w-full relative {=$class}"
+>
+  <div
+    class="relative imgHouse w-full h-[165px] rounded-lg bg-white opacity-60 group-hover:opacity-100 outline outline-1 group-hover:outline-primary outline-transparent transition-all duration-500 flex justify-center items-center"
+  >
+    <img class="h-full w-full object-contain" src="{=$img}" alt="Дом" />
+
+    <div
+      class="bg-white p-1 rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex justify-center items-center"
+    >
+      <div
+        class="iconContainer group-hover:bg-primary transition-all duration-500 flex justify-center items-center rounded-full w-[30px] h-[30px]"
+      >
+        <svg
+          width="10"
+          height="8"
+          viewBox="0 0 10 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="iconColor group-hover:fill-white transition-all duration-500 fill-[#BFBFBF]"
+            d="M9.82178 1.10594L8.94059 0.186046C8.82178 0.0620155 8.67327 0 8.50495 0C8.33663 0 8.18812 0.0620155 8.06931 0.186046L3.83168 4.60982L1.94059 2.62532C1.82178 2.50129 1.67327 2.43928 1.50495 2.43928C1.33663 2.43928 1.18812 2.50129 1.06931 2.62532L0.188119 3.54522C0.0594059 3.66925 0 3.82429 0 4C0 4.17571 0.0594059 4.33075 0.178218 4.45478L2.51485 6.89406L3.39604 7.81395C3.51485 7.93798 3.66337 8 3.83168 8C4 8 4.14851 7.93798 4.26733 7.81395L5.14851 6.89406L9.82178 2.0155C9.94059 1.89147 10 1.73643 10 1.56072C10 1.38501 9.94059 1.22997 9.82178 1.10594Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <span class="font-medium text-xl leading-[24.38px] text-center"
+    >{=$title}</span
+  >
+
+  <input
+    {="$checked}"
+    class="absolute inputSelectHouse w-full h-full top-0 left-0 opacity-0 cursor-pointer"
+    type="radio"
+    name="house"
+    value="{=$value}"
+  />
+</div>

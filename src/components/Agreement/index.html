@@ -1,20 +1,32 @@
 <section
-  class="custom:bg-[url('bgAgreement.webp')] bg-right bg-contain bg-no-repeat h-[729px]"
+  class="custom:bg-[url('bgAgreement.webp')] bg-none bg-right bg-contain bg-no-repeat xl:h-[729px]"
 >
-  <div class="container-main mx-auto h-full flex gap-[50px] relative">
-    <img class="h-full w-[474px]" src="Agreement.webp" alt="Договор" />
+  <div
+    class="container-main mx-auto h-full flex xl:flex-row flex-col xl:gap-[50px] relative"
+  >
+    <img
+      class="h-full w-[474px] xl:block hidden"
+      src="Agreement.webp"
+      alt="Договор"
+    />
 
-    <div class="pt-[56px]">
-      <div class="space-y-[5px] text-[40px] leading-[52px]">
+    <div class="xl:pt-[56px]">
+      <div
+        class="xl:space-y-[5px] xl:text-[40px] text-[22px] xl:leading-[52px] leading-[28.6px]"
+      >
         <p>Все работы выполняются</p>
         <p class="font-semibold">согласно договора</p>
       </div>
 
-      <p class="mt-5 text-[26px] font-light leading-[33.8px]">
+      <p
+        class="xl:mt-5 mt-2.5 xl:text-[26px] text-lg font-light xl:leading-[33.8px] leading-[23.4px]"
+      >
         в котором четко прописываем:
       </p>
 
-      <div class="mt-[22px] space-y-4 w-[476px]">
+      <div
+        class="xl:mt-[22px] mt-5 xl:space-y-4 space-y-2.5 xl:w-[476px] w-full"
+      >
         <load
           src="src/components/Agreement/Card.html"
           title="Сроки изготовления и установки"
@@ -33,31 +45,45 @@
       </div>
 
       <button
-        class="mt-7 hover:opacity-75 text-white leading-[23.4px] text-lg font-semibold w-[371px] h-[60px] bg-secondary"
+        class="mt-7 hover:opacity-75 text-white leading-[23.4px] text-lg font-semibold w-[371px] h-[60px] bg-secondary xl:flex hidden"
       >
         Вызвать мастера на замер
       </button>
     </div>
 
-    <div class="absolute right-0 bottom-0 flex flex-col items-center">
-      <p
-        class="linear-gradient-blue shadow-agreement-name-and-position text-xl leading-[26px] font-bold flex justify-center relative z-[1] items-center h-[57px] w-[235px] rounded-[7px] text-white"
+    <div class="xl:contents block">
+      <div
+        class="xl:hidden flex items-end h-[237px] bg-right bg-no-repeat bg-contain bg-[url('bgAgreement.webp')]"
       >
-        Кузнецов Алексей
-      </p>
+        <img class="h-[212px] w-[138px]" src="Agreement.webp" alt="Договор" />
+      </div>
 
-      <p
-        class="shadow-agreement-text linear-gradient-gray-text rounded-[7px] w-[352px] h-[160px] flex justify-center items-center text-lg italic leading-[23.4px] font-semibold text-[#164673] text-center -mt-[18px] -mb-5"
-      >
-        “Мы дорожим репутацией - при обнаружении дефектов незамедлительно
-        исправляем недочеты за свой счет”
-      </p>
+      <div class="xl:absolute right-0 bottom-0 xl:top-auto flex -top-[18px] relative flex-col items-center">
+        <p
+          class="linear-gradient-blue shadow-agreement-name-and-position xl:text-xl text-base xl:leading-[26px] leading-[20.8px] xl:font-bold font-semibold flex justify-center relative z-[1] items-center xl:h-[57px] h-[46px] xl:w-[235px] w-[200px] rounded-[7px] text-white"
+        >
+          Кузнецов Алексей
+        </p>
 
-      <p
-        class="linear-gradient-gray-position shadow-agreement-name-and-position rounded-[7px] flex-col flex justify-center items-center h-[71px] w-[250.65px] font-light text-center text-lg leading-[23.4px]"
-      >
-        Руководитель-мастер<span class="font-semibold">ООО «КубДекор»</span>
-      </p>
+        <p
+          class="shadow-agreement-text linear-gradient-gray-text rounded-[7px] xl:w-[352px] w-[300px] xl:h-[160px] h-[100px] flex justify-center items-center xl:text-lg text-sm italic xl:leading-[23.4px] leading-[18.2px] font-semibold text-[#164673] text-center xl:-mt-[18px] -mt-[7px] xl:-mb-5"
+        >
+          “Мы дорожим репутацией - при обнаружении дефектов незамедлительно
+          исправляем недочеты за свой счет”
+        </p>
+
+        <p
+          class="linear-gradient-gray-position shadow-agreement-name-and-position rounded-[7px] flex-col flex justify-center items-center xl:h-[71px] h-[50px] xl:w-[250.65px] w-[200px] font-light text-center xl:text-lg text-sm xl:leading-[23.4px] leading-[18.2px]"
+        >
+          Руководитель-мастер<span class="font-semibold">ООО «КубДекор»</span>
+        </p>
+      </div>
     </div>
+
+    <button
+      class="mt-0.5 hover:opacity-75 text-white xl:leading-[23.4px] leading-[20.8px] xl:text-lg text-base font-semibold xl:w-[371px] w-full xl:h-[60px] h-10 bg-secondary xl:hidden flex"
+    >
+      Вызвать мастера на замер
+    </button>
   </div>
 </section>

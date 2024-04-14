@@ -1,51 +1,65 @@
-<section class="mx-auto container-main flex gap-[118px] !mt-[200px] bg-[#F9F9F9E5] px-[50px] pt-[50px] rounded-[5px]">
-  <div class="w-[409px] space-y-10">
-    <h2>Оставьте заявку на <span>бесплатный выезд</span> мастера на замер</h2>
+<section class="mx-auto container-main xl:!mt-[200px]">
+  <div
+    class="flex xl:gap-[118px] gap-5 xl:flex-row flex-col bg-[#F9F9F9E5] xl:px-[50px] px-2.5 xl:pt-[50px] pt-5 xl:pb-0 pb-5 rounded-[5px]"
+  >
+    <div class="xl:w-[409px] w-full xl:space-y-10 space-y-5">
+      <h2 class="xl:text-left text-center">
+        Оставьте заявку на <span>бесплатный выезд</span> мастера на замер
+      </h2>
 
-    <div class="space-y-6">
-      <load
-        src="src/components/Workers/Card.html"
-        icon="freeDriveEdge1.webp"
-        text="Наш мастер <span>приедет на<br/> замер</span> в назначенное время"
-      />
-      <load
-        src="src/components/Workers/Card.html"
-        icon="freeDriveEdge2.webp"
-        text="Полностью <span>проконсультирует</span><br/> по всем возникшим вопросам"
-      />
-      <load
-        src="src/components/Workers/Card.html"
-        icon="freeDriveEdge3.webp"
-        text="Рассчитает <span>точную стоимость</span><br/> с учетом работ и материалов"
-      />
-      <load
-        src="src/components/Workers/Card.html"
-        icon="freeDriveEdge4.webp"
-        text="Заключит <span>договор</span><br/> у вас на дому"
-      />
-    </div>
-  </div>
-
-  <div class="flex items-center relative">
-    <img
-      class="h-[644px] w-[340px]"
-      src="freeDrivePeople.webp"
-      alt="Работник"
-    />
-
-    <load src="src/components/FreeDrive/Form.html" />
-
-    <div class="absolute bottom-0 -left-[46px] w-[200px]">
-      <div
-        class="linear-gradient-blue shadow-agreement-name-and-position w-full h-11 rounded-[7px] flex justify-center items-center text-white text-center text-lg font-bold leading-[23.4px]"
-      >
-        Сергей
+      <div class="xl:space-y-6 space-y-3.5">
+        <load
+          src="src/components/Workers/Card.html"
+          icon="freeDriveEdge1.webp"
+          text="Наш мастер <span>приедет на<br/> замер</span> в назначенное время"
+        />
+        <load
+          src="src/components/Workers/Card.html"
+          icon="freeDriveEdge2.webp"
+          text="Полностью <span>проконсультирует</span><br/> по всем возникшим вопросам"
+        />
+        <load
+          src="src/components/Workers/Card.html"
+          icon="freeDriveEdge3.webp"
+          text="Рассчитает <span>точную стоимость</span><br/> с учетом работ и материалов"
+        />
+        <load
+          src="src/components/Workers/Card.html"
+          icon="freeDriveEdge4.webp"
+          text="Заключит <span>договор</span><br/> у вас на дому"
+        />
       </div>
+    </div>
+
+    <div class="flex xl:flex-row flex-col items-center relative">
+      <img
+        class="xl:h-[644px] h-[321px] xl:w-[340px] xl:static absolute xl:self-auto self-end w-[169px]"
+        src="freeDrivePeople.webp"
+        alt="Работник"
+      />
+
+      <img
+        class="xl:hidden block absolute top-0 left-0 w-[132px] h-[119px]"
+        src="freeDriveTerminal.webp"
+        alt="Терминал"
+      />
+
+      <load src="src/components/FreeDrive/Form.html" />
 
       <div
-        class="shadow-agreement-name-and-position linear-gradient-gray-position w-full h-11 rounded-[7px] flex justify-center items-center text-center leading-[18.2px] text-sm font-light"
+        class="absolute xl:bottom-0 xl:top-auto top-[92px] xl:-left-[46px] left-0 xl:w-[200px] w-[148px]"
       >
-        Опыт работы&nbsp;<span class="font-semibold">с 2002 г</span>
+        <div
+          class="linear-gradient-blue shadow-agreement-name-and-position w-full xl:h-11 h-[30px] xl:rounded-[7px] rounded-[4px] flex justify-center items-center text-white text-center xl:text-lg text-sm font-bold xl:leading-[23.4px] leading-[18.2px]"
+        >
+          Сергей
+        </div>
+
+        <div
+          class="shadow-agreement-name-and-position linear-gradient-gray-position w-full xl:h-11 h-[30px] xl:rounded-[7px] rounded-[4px] flex justify-center items-center text-center xl:leading-[18.2px] leading-[15.6px] xl:text-sm text-xs font-light"
+        >
+          Опыт работы&nbsp;<span class="font-semibold">с 2002 г</span>
+        </div>
       </div>
     </div>
   </div>

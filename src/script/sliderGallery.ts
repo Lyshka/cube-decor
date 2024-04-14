@@ -16,9 +16,19 @@ const sliderGallery = () => {
         prevEl: `.prev${idSlider}`,
         nextEl: `.next${idSlider}`,
       },
-      pagination: {
-        el: `.swiper-pagination-${idSlider}`,
-        clickable: true,
+      breakpoints: {
+        1368: {
+          pagination: {
+            el: `.swiper-pagination-${idSlider}`,
+            clickable: true,
+          },
+        },
+        0: {
+          pagination: {
+            el: `.swiper-pagination-${idSlider}-mobile`,
+            clickable: true,
+          },
+        },
       },
     });
   });
@@ -52,3 +62,32 @@ const selectGallery = () => {
   });
 };
 selectGallery();
+
+const selectImg = () => {
+  const AllGalleryElements =
+    document.querySelectorAll<HTMLElement>(".sliderGallery");
+
+  AllGalleryElements.forEach((GalleryElement) => {
+    const allGallerySlidesElements =
+      document.querySelectorAll<HTMLElement>(".swiper-slide");
+
+    allGallerySlidesElements.forEach((GallerySlideElement) => {
+      const bigImg = GallerySlideElement.querySelector(
+        ".bigImg"
+      ) as HTMLImageElement;
+
+      const minImgElements =
+        GallerySlideElement.querySelectorAll<HTMLImageElement>(".minImg");
+
+      minImgElements.forEach((minImg) => {
+        const imgSrc = minImg.src;
+
+        minImg.onclick = () => {
+          bigImg.src = imgSrc;
+        };
+      });
+    });
+  });
+};
+
+selectImg();

@@ -1,13 +1,13 @@
-<section class="mx-auto container-main space-y-[58px]">
-  <div class="flex items-center">
-    <div class="space-y-10">
-      <h2 class="text-nowrap">
-        Ваши окна будут устанавливать<br />
-        <span>опытные монтажники</span><br />
+<section class="mx-auto container-main xl:space-y-[58px] space-y-2.5">
+  <div class="flex xl:flex-row flex-col xl:gap-0 gap-[30px] items-center">
+    <div class="xl:space-y-10 space-y-5">
+      <h2 class="xl:text-nowrap xl:text-left text-center">
+        Ваши окна будут устанавливать<br class="xl:block hidden" />
+        <span>опытные монтажники</span><br class="xl:block hidden" />
         с опытом работы более 10 лет
       </h2>
 
-      <div class="space-y-6">
+      <div class="xl:space-y-6 space-y-3.5">
         <load
           src="src/components/Workers/Card.html"
           icon="workerEdge1.webp"
@@ -27,60 +27,39 @@
     </div>
 
     <div
-      class="bg-[url('workerMain.webp')] h-[582px] w-[778px] bg-cover bg-no-repeat rounded-[5px] relative"
+      class="xl:bg-[url('workerMain.webp')] bg-[url('workerMainMobile.webp')] xl:h-[582px] h-[220px] xl:w-[778px] w-full bg-cover bg-no-repeat rounded-[5px] relative"
     >
-      <div class="absolute right-5 top-5 w-[200px]">
-        <div
-          class="linear-gradient-blue shadow-agreement-name-and-position w-full h-11 rounded-[7px] flex justify-center items-center text-white text-center text-lg font-bold leading-[23.4px]"
-        >
-          Семён М.
-        </div>
-
-        <div
-          class="shadow-agreement-name-and-position linear-gradient-gray-position w-full h-11 rounded-[7px] flex justify-center items-center text-center leading-[18.2px] text-sm font-light"
-        >
-          Опыт работы&nbsp;<span class="font-semibold">с 2002 г</span>
-        </div>
-      </div>
+      <load
+        src="src/components/Workers/Badge.html"
+        name="Семён М."
+        year="2002"
+        class=""
+      />
       &nbsp;
     </div>
   </div>
 
-  <div class="grid grid-cols-2 gap-6 h-[496px]">
+  <div class="grid xl:grid-cols-2 grid-cols-1 xl:gap-6 gap-2.5 xl:h-[496px]">
     <div
-      class="bg-[url('worker1.webp')] bg-cover bg-no-repeat rounded-[5px] relative"
+      class="bg-[url('worker1.webp')] bg-cover bg-no-repeat rounded-[5px] relative xl:h-auto h-[220px]"
     >
-      <div class="absolute right-5 top-5 w-[200px]">
-        <div
-          class="linear-gradient-blue shadow-agreement-name-and-position w-full h-11 rounded-[7px] flex justify-center items-center text-white text-center text-lg font-bold leading-[23.4px]"
-        >
-          Игорь В.
-        </div>
-
-        <div
-          class="shadow-agreement-name-and-position linear-gradient-gray-position w-full h-11 rounded-[7px] flex justify-center items-center text-center leading-[18.2px] text-sm font-light"
-        >
-          Опыт работы&nbsp;<span class="font-semibold">с 2014 г</span>
-        </div>
-      </div>
+      <load
+        src="src/components/Workers/Badge.html"
+        name="Игорь В."
+        year="2014"
+        class=""
+      />
     </div>
 
     <div
-      class="bg-[url('worker2.webp')] bg-cover bg-no-repeat rounded-[5px] relative"
+      class="bg-[url('worker2.webp')] bg-cover bg-no-repeat rounded-[5px] relative xl:h-auto h-[220px]"
     >
-      <div class="absolute right-5 top-5 w-[200px]">
-        <div
-          class="linear-gradient-blue shadow-agreement-name-and-position w-full h-11 rounded-[7px] flex justify-center items-center text-white text-center text-lg font-bold leading-[23.4px]"
-        >
-          Алексей К.
-        </div>
-
-        <div
-          class="shadow-agreement-name-and-position linear-gradient-gray-position w-full h-11 rounded-[7px] flex justify-center items-center text-center leading-[18.2px] text-sm font-light"
-        >
-          Опыт работы&nbsp;<span class="font-semibold">с 2004 г</span>
-        </div>
-      </div>
+      <load
+        src="src/components/Workers/Badge.html"
+        name="Алексей К."
+        year="2004"
+        class=""
+      />
     </div>
   </div>
 </section>

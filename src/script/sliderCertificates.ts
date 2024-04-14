@@ -5,12 +5,20 @@ import "swiper/css";
 const sliderCertificates = () => {
   new Swiper("#sliderCertificates", {
     modules: [Navigation],
-    slidesPerView: 3,
-    spaceBetween: 24,
-    height: 260,
     navigation: {
       prevEl: ".prevCertificates",
       nextEl: ".nextCertificates",
+    },
+    breakpoints: {
+      1368: {
+        height: 260,
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      0: {
+        spaceBetween: 8,
+        width: 166,
+      },
     },
   });
 };

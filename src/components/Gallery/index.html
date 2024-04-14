@@ -1,13 +1,13 @@
-<section class="container-main mx-auto space-y-[60px]">
+<section class="container-main mx-auto xl:space-y-[60px] space-y-5">
   <h4 class="text-center">
     За 2022-2023 год мы<br />
     установили <span>2 320 м2 окон</span>
   </h4>
 
-  <div class="space-y-10">
+  <div class="xl:space-y-10 space-y-5">
     <load src="src/components/Gallery/Select.html" />
 
-    <div class="relative h-[580px]">
+    <div class="relative xl:h-[580px]">
       <load
         src="src/components/Gallery/Slider.html"
         id="WindowsTurnkey"
@@ -16,6 +16,12 @@
       <load src="src/components/Gallery/Slider.html" id="BalconyFrames" />
       <load src="src/components/Gallery/Slider.html" id="HouseWindows" />
       <load src="src/components/Gallery/Slider.html" id="VerandasGazebos" />
+
+      <button
+        class="font-semibold bg-secondary xl:text-lg text-base mt-6 hover:opacity-75 text-white leading-[20.8px] w-full h-10 xl:hidden block"
+      >
+        Вызвать мастера на замер
+      </button>
     </div>
   </div>
 </section>

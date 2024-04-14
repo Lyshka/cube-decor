@@ -1,0 +1,28 @@
+<div
+  class="w-full bg-[#F8F8F8] rounded-2xl h-full flex-col !flex justify-center items-center gap-[21px] px-[50px] swiper-slide"
+>
+  <div class="space-y-[30px] w-full">
+    <load src="src/components/Quiz/components/Loader.html" step="1" />
+    <load
+      src="src/components/Quiz/components/Title.html"
+      questNumber="1"
+      quest="Укажите, куда будем ставить окна?"
+    />
+    <load src="src/components/Quiz/components/House/Layout.html" />
+  </div>
+
+  <div class="flex justify-between items-center w-full">
+    <p class="text-[#4C4C4C] leading-[18.2px] text-sm font-light">
+      <span class="font-medium">Выберите вариант ответа</span> и нажмите кнопку
+      “Далее”
+    </p>
+
+    <button
+      id="nextHouse"
+      type="button"
+      class="w-[216px] h-[60px] bg-secondary text-white leading-[23.4px] text-lg hover:opacity-75"
+    >
+      Далее
+    </button>
+  </div>
+</div>
