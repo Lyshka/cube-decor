@@ -132,7 +132,9 @@
     @apply flex xl:flex-row flex-col;
   }
 
-  #modalNotExit.active {
+  #modalNotExit.active,
+  #modalOrder.active,
+  #modalThank.active {
     @apply z-[2] h-full opacity-100;
   }
 
@@ -217,6 +219,6 @@
   }
 
   .containerConf .iconColor.active {
-    @apply opacity-100
+    @apply opacity-100;
   }
 }

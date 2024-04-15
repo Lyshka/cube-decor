@@ -56,11 +56,12 @@
         </p>
 
         <div class="relative">
-          <div class="space-y-3 xl:max-w-[414px] w-full">
+          <form id="formLamination" class="space-y-3 xl:max-w-[414px] w-full">
             <input
               class="xl:h-[60px] h-10 bg-white xl:text-base text-sm xl:leading-[20.8px] leading-normal rounded-[5px] w-full phone-input px-5 xl:py-5 py-[11px] placeholder:text-[#7C7C7C]"
               placeholder="Телефон"
               type="tel"
+              name="tel"
             />
 
             <button
@@ -70,7 +71,9 @@
               <span class="xl:inline hidden">стоимость этого окна</span>
             </button>
 
-            <a class="underline xl:hidden block text-xs xl:text-[#333333] text-white" href=""
+            <a
+              class="underline xl:hidden block text-xs xl:text-[#333333] text-white"
+              href=""
               >согласие на обработку персональных данных</a
             >
 
@@ -82,7 +85,7 @@
                 >согласие на обработку персональных данных</a
               >
             </p>
-          </div>
+          </form>
 
           <div class="xl:block hidden absolute top-0 -right-[186px]">
             <load src="src/components/QuestForm/Social.html" />
@@ -92,7 +95,9 @@
     </div>
   </div>
 
-  <div class="container-main mx-auto grid xl:grid-cols-2 xl:gap-4 items-start gap-2.5">
+  <div
+    class="container-main mx-auto grid xl:grid-cols-2 xl:gap-4 items-start gap-2.5"
+  >
     <div
       class="shadow-main bg-[#F8F8F8] rounded-lg xl:px-5 px-2.5 xl:py-[22px] py-2.5 flex xl:flex-row flex-col xl:gap-5 gap-2.5"
     >

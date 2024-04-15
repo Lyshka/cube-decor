@@ -1,9 +1,11 @@
 import "./style.css";
-import "./script/selectBack";
-import "./script/selectKnob";
 import "./script/sliderCertificates";
 import "./script/sliderReview";
 import "./script/telInput";
 import "./script/sliderGallery";
-// import "./script/notExit";
+import "./script/notExit";
 import "./script/quiz";
+import "./script/orderForm";
+import "./script/defaultFormSubmit";
+import "./script/thank";
+import "./script/lamination";

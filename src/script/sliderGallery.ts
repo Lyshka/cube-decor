@@ -67,7 +67,7 @@ const selectImg = () => {
   const AllGalleryElements =
     document.querySelectorAll<HTMLElement>(".sliderGallery");
 
-  AllGalleryElements.forEach((GalleryElement) => {
+  AllGalleryElements.forEach(() => {
     const allGallerySlidesElements =
       document.querySelectorAll<HTMLElement>(".swiper-slide");
 

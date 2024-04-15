@@ -1,6 +1,6 @@
 <section
   id="modalOrder"
-  class="fixed flex z-[2] opacity- transition-all h-full duration-1000 bg-black/50 backdrop-blur-2xl w-full justify-center items-center xl:px-0 px-2.5"
+  class="fixed flex overflow-hidden z-[-1] opacity-0 transition-all h-full duration-1000 bg-black/50 backdrop-blur-2xl w-full justify-center items-center xl:px-0 px-2.5"
 >
   <div
     class="xl:max-w-[1058px] w-full xl:h-[600px] bg-[#F8F8F8] relative rounded-[10px] xl:pt-[100px] pt-[37px] xl:pl-[60px] pl-2.5 xl:pr-0 pr-2.5 xl:pb-0 pb-[207px]"
@@ -29,15 +29,15 @@
     </button>
 
     <div class="space-y-5 xl:w-[586px] w-full">
-      <h4 class="font-semibold titleOrderForm">Рассчитать стоимость окна</h4>
+      <h4 class="font-semibold titleOrderForm"></h4>
 
       <p
-        class="xl:leading-[33.8px] leading-[17.07px] xl:!mt-5 !mt-2.5 font-light xl:text-[26px] text-sm textOrderForm"
+        class="xl:leading-[33.8px] leading-[17.07px] xl:!mt-5 !mt-2.5 font-light xl:text-[26px] text-sm"
       >
         Оставьте заявку и наш менеджер свяжется с Вами в течение 15 мин
       </p>
 
-      <form class="space-y-5">
+      <form id="orderForm" class="space-y-5">
         <input
           class="bg-white rounded-[5px] xl:w-[416px] xl:text-base text-sm xl:leading-[20.8px] leading-[18.2px] w-full xl:h-[60px] h-10 px-5 xl:py-5 py-[11px] placeholder:text-[#7C7C7C] phone-input"
           placeholder="Телефон"

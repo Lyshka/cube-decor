@@ -305,8 +305,6 @@ const quiz = () => {
           ) as HTMLInputElement
         )?.value;
 
-        console.log({ glazingType, finishing, material, lamination });
-
         if (prevConfigureSlide === 3) {
           if (!glazingType || !material || !lamination) {
             toastr.warning("Вы ответили не на все вопросы!");
@@ -432,6 +430,8 @@ const quiz = () => {
       ).value;
 
       sliderQuiz.slideTo(9);
+
+      console.log({telValue, timeCallValue, selectSocialValue})
     };
   };
 
