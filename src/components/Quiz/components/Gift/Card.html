@@ -1,11 +1,15 @@
 <div
   role="button"
-  class="flex selectHouse group flex-col items-center xl:gap-5 gap-3 w-full relative {=$class}"
+  class="flex selectGift group flex-col items-center xl:gap-5 gap-3 w-full relative {=$class}"
 >
   <div
-    class="relative imgHouse w-full xl:h-[165px] h-[90px] rounded-lg bg-white opacity-60 group-hover:opacity-100 outline outline-1 group-hover:outline-primary outline-transparent transition-all duration-500 flex justify-center items-center"
+    class="relative imgGift w-full xl:h-[165px] h-[90px] rounded-lg bg-white opacity-60 group-hover:opacity-100 outline outline-1 group-hover:outline-primary outline-transparent transition-all duration-500 flex justify-center items-center"
   >
-    <img class="h-full w-full object-contain" src="{=$img}" alt="Дом" />
+    <img
+      class="h-full w-full object-contain {=$classImg}"
+      src="{=$img}"
+      alt="Дом"
+    />
 
     <div
       class="bg-white xl:p-1 p-0.5 rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex justify-center items-center"
@@ -35,9 +39,9 @@
 
   <input
     {="$checked}"
-    class="absolute inputSelectHouse w-full h-full top-0 left-0 opacity-0 cursor-pointer"
+    class="absolute inputSelectGift w-full h-full top-0 left-0 opacity-0 cursor-pointer"
     type="radio"
-    name="house"
-    value="{=$value}"
+    name="gift"
+    value="{=$title}"
   />
 </div>

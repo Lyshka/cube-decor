@@ -1,4 +1,6 @@
-<div class="bg-white h-[35px] w-full rounded-lg px-1.5 py-[5px] relative">
+<div
+  class="bg-white xl:h-[35px] h-[30px] w-full rounded-lg xl:px-1.5 px-[5px] py-[5px] relative {=$class}"
+>
   <div style="width: {=$width}%;" class="bg-primary rounded-lg w-1/6">
     <svg
       class="animate-pulse transition-all duration-1000"
@@ -237,7 +239,7 @@
   <p
     class="inline absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-fit text-sm text-center leading-[18.2px] font-medium"
   >
-    Шаг <span>{=$step}</span> из 5
+    <span>{=$step}</span>
   </p>
   &nbsp;
 </div>

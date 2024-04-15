@@ -1,13 +1,17 @@
-<div class="flex items-center gap-[22px]">
+<div class="flex items-center xl:gap-[22px] gap-2.5">
   <div
-    class="flex justify-center items-center bg-white w-[127px] h-[45px] rounded-[10px]"
+    class="flex justify-center items-center bg-white xl:w-[127px] w-20 xl:h-[45px] h-[30px] xl:rounded-[10px] rounded-lg"
   >
     <p
-      class="text-base font-semibold leading-[20.8px] text-center text-primary"
+      class="xl:text-base text-sm font-semibold xl:leading-[20.8px] leading-[18.2px] text-center text-primary"
     >
       Вопрос <span>{=$questNumber}</span>
     </p>
   </div>
 
-  <p class="leading-[39px] text-[30px] font-semibold">{=$quest}</p>
+  <p
+    class="xl:leading-[39px] leading-[18.2px] xl:text-[30px] text-sm font-semibold"
+  >
+    {=$quest}
+  </p>
 </div>

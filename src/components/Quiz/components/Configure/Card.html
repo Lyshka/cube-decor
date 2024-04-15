@@ -15,18 +15,18 @@
   data-max-width-front="{=$maxWidthFront}"
   data-min-Width-back="{=$minwidthBack}"
   data-max-width-back="{=$maxwidthBack}"
-  class="flex group configureCard flex-col items-center gap-5 w-full relative"
+  class="flex group configureCard flex-col items-center xl:gap-5 gap-3 w-full relative"
 >
   <div
-    class="relative configureImg w-full h-[165px] rounded-lg bg-white opacity-60 group-hover:opacity-100 outline outline-1 group-hover:outline-primary outline-transparent transition-all duration-500 pt-1.5 flex justify-center items-center"
+    class="relative configureImg w-full xl:h-[165px] h-[90px] rounded-lg bg-white opacity-60 group-hover:opacity-100 outline outline-1 group-hover:outline-primary outline-transparent transition-all duration-500 pt-1.5 flex justify-center items-center"
   >
-    <img class="max-h-[159px] w-full object-contain" src="{=$img}" alt="Окно" />
+    <img class="xl:max-h-[159px] max-h-[74px] w-full object-contain" src="{=$img}" alt="Окно" />
 
     <div
-      class="rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex min-w-20 h-[25px] justify-center gap-2.5 items-center bg-[#FBFBFB]"
+      class="rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex xl:min-w-20 min-w-[72px] xl:h-[25px] h-5 justify-center xl:gap-2.5 gap-4 items-center bg-[#FBFBFB]"
     >
       <button
-        class="font-medium text-xl configureDecremnt leading-[24.38px] p-1 -m-1"
+        class="font-medium xl:text-xl text-base configureDecremnt xl:leading-[24.38px] leading-[19.5px] p-1 -m-1"
         type="button"
       >
         -
@@ -35,13 +35,13 @@
       <input
         disabled
         name="{=$name}"
-        class="font-medium text-lg leading-[21.94px] text-center w-[26px] flex-shrink-0 placeholder:text-[#333333] text-secondary configureInputValue"
+        class="font-medium xl:text-lg text-sm xl:leading-[21.94px] leading-[17.07px] text-center xl:w-[26px] w-[13px] flex-shrink-0 placeholder:text-[#333333] text-secondary configureInputValue"
         placeholder="0"
         type="text"
       />
 
       <button
-        class="font-medium text-xl configureIncrement leading-[24.38px] p-1 -m-1"
+        class="font-medium xl:text-xl text-base configureIncrement xl:leading-[24.38px] leading-[19.5px] p-1 -m-1"
         type="button"
       >
         +
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <span class="font-medium text-xl leading-[24.38px] text-center"
+  <span class="font-medium xl:text-xl text-sm xl:leading-[24.38px] leading-[18.2px] text-center"
     >{=$title}</span
   >
 </div>

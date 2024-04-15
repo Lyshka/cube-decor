@@ -141,15 +141,18 @@
   }
 
   #quiz #selectHouse .selectHouse.active .imgHouse,
-  #quiz #selectConfigure .configureCard.active .configureImg {
+  #quiz #selectConfigure .configureCard.active .configureImg,
+  #quiz #selectGift .selectGift.active .imgGift {
     @apply opacity-100 outline outline-1 outline-primary;
   }
 
-  #quiz #selectHouse .selectHouse.active .iconContainer {
+  #quiz #selectHouse .selectHouse.active .iconContainer,
+  #quiz #selectGift .selectGift.active .iconContainer {
     @apply bg-primary;
   }
 
-  #quiz #selectHouse .selectHouse.active .iconContainer .iconColor {
+  #quiz #selectHouse .selectHouse.active .iconContainer .iconColor,
+  #quiz #selectGift .selectGift.active .iconContainer .iconColor {
     @apply fill-white;
   }
 
@@ -207,5 +210,13 @@
 
   .NotValueContainer.active .iconChecked {
     @apply opacity-100;
+  }
+
+  #quiz .text-calculation span {
+    @apply font-medium;
+  }
+
+  .containerConf .iconColor.active {
+    @apply opacity-100
   }
 }

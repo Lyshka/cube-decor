@@ -4,28 +4,24 @@
   <div class="xl:space-y-[30px] space-y-2.5 w-full">
     <load
       src="src/components/Quiz/components/Loader.html"
-      step="Шаг 3 из 5"
-      width="50"
+      step="Шаг 4 из 5"
+      class="text-white"
+      width="66"
     />
     <load
       src="src/components/Quiz/components/Title.html"
-      questNumber="3"
-      quest="Укажите примерные размеры изделий"
+      questNumber="4"
+      quest="Выберите варианты"
     />
-
-    <load src="src/components/Quiz/components/Dimension/Layout.html" />
+    
+    <load src="src/components/Quiz/components/Variant/Layout.1.html" />
   </div>
 
-  <div
-    class="flex xl:flex-row flex-col xl:justify-end justify-center xl:gap-0 gap-5 items-center w-full"
-  >
-    <div
-      class="flex xl:flex-row flex-col-reverse items-center xl:gap-[50px] gap-5"
-    >
+  <div class="flex xl:flex-row flex-col xl:justify-end justify-center xl:gap-0 gap-5 items-center w-full">
+    <div class="flex xl:flex-row flex-col-reverse items-center xl:gap-[50px] gap-5">
       <button
         type="button"
-        id="prevDimension"
-        class="flex text-secondary gap-2.5 items-center xl:text-lg text-base font-medium xl:leading-[21.94px] leading-[19.5px]"
+        class="prevVariant flex text-secondary gap-2.5 items-center xl:text-lg text-base font-medium xl:leading-[21.94px] leading-[19.5px]"
       >
         <svg
           width="7"
@@ -44,9 +40,8 @@
       </button>
 
       <button
-        id="nextDimension"
         type="button"
-        class="w-[216px] xl:h-[60px] h-10 bg-secondary text-white leading-[23.4px] xl:text-lg text-base font-semibold hover:opacity-75"
+        class="nextVariant w-[216px] xl:h-[60px] h-10 bg-secondary text-white leading-[23.4px] xl:text-lg text-base font-semibold hover:opacity-75"
       >
         Далее
       </button>

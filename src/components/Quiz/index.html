@@ -1,22 +1,30 @@
-<section id="quiz" class="container-main mx-auto space-y-[65px]">
-  <div class="text-center space-y-[30px]">
+<section id="quiz" class="container-main mx-auto xl:space-y-[65px] space-y-3.5">
+  <div class="text-center xl:space-y-[30px] space-y-2.5">
     <h4 class="font-semibold">Не нашли ваших размеров?</h4>
 
-    <p class="font-light text-[26px] leading-[33.8px]">
+    <p
+      class="font-light xl:text-[26px] text-lg xl:leading-[33.8px] leading-[23.4px]"
+    >
       Рассчитайте стоимость ваших окон, ответив на 5 вопросов
     </p>
   </div>
 
-  <div class="gap-[25px] flex h-[726px]">
+  <div class="xl:gap-[25px] gap-5 xl:flex-row flex-col-reverse flex xl:h-[726px]">
     <div id="sliderQuiz" class="overflow-hidden w-full">
-      <div class="swiper-wrapper w-full">
+      <form id="QuizForm" class="swiper-wrapper w-full">
         <load src="src/components/Quiz/Slides/First.html" />
         <load src="src/components/Quiz/Slides/Second.1.html" />
         <load src="src/components/Quiz/Slides/Second.2.html" />
         <load src="src/components/Quiz/Slides/Second.3.html" />
         <load src="src/components/Quiz/Slides/Third.html" />
-      </div>
+        <load src="src/components/Quiz/Slides/Fourth.1.html" />
+        <load src="src/components/Quiz/Slides/Fourth.2.html" />
+        <load src="src/components/Quiz/Slides/Fifth.html" />
+        <load src="src/components/Quiz/Slides/Sixth.html" />
+        <load src="src/components/Quiz/Slides/Seventh.html" />
+      </form>
     </div>
+
     <load src="src/components/Quiz/Result/Result.html" />
   </div>
 </section>
