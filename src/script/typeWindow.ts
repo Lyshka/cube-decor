@@ -21,4 +21,6 @@ export interface typeWindow {
   maxWidthFront: string;
   minWidthBack: string;
   maxWidthBack: string;
+  count?: string;
+  size?: string;
 }

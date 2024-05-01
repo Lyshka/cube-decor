@@ -1,4 +1,5 @@
 import toastr from "toastr";
+import axios from "axios"
 
 const notExit = () => {
   const modalNotExitElement = document.getElementById("modalNotExit");
@@ -23,7 +24,7 @@ const notExit = () => {
     modalNotExitElement?.classList.remove("active");
   };
 
-  notExitForm.addEventListener("submit", (event: Event) => {
+  notExitForm.addEventListener("submit", async (event: Event) => {
     event.preventDefault();
 
     const telValue = (
@@ -54,11 +55,27 @@ const notExit = () => {
       return;
     }
 
-    modalNotExitElement?.classList.remove("active");
-    modalThank?.classList.add("active");
-    (event.target as HTMLFormElement).reset();
+    const formData = new FormData();
+    formData.append("action", "form_main");
+    formData.append("formName", "notExitForm");
+    formData.append("tel", telValue);
+    formData.append("called", calledValue);
 
-    console.log({ telValue, calledValue });
+    const {
+      data: { success, message },
+    } = await axios.post("/wp-admin/admin-ajax.php", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+
+    if (success) {
+      modalNotExitElement?.classList.remove("active");
+      modalThank?.classList.add("active");
+      (event.target as HTMLFormElement).reset();
+    } else {
+      toastr.error(message);
+    }
   });
 };
 

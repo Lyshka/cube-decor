@@ -1,8 +1,13 @@
 import toastr from "toastr";
+import axios from "axios";
 
 const lamination = () => {
-  let back = document.querySelector(".selectBack.active span")?.textContent;
-  let knob = document.querySelector(".selectKnob.active span")?.textContent;
+  let back = (
+    document.querySelector(".selectBack.active span") as HTMLSpanElement
+  ).textContent as string;
+  let knob = (
+    document.querySelector(".selectKnob.active span") as HTMLSpanElement
+  ).textContent as string;
 
   const selectBackHandle = () => {
     const selectBackElements =
@@ -71,7 +76,7 @@ const lamination = () => {
     ) as HTMLFormElement;
     const modalThank = document.getElementById("modalThank");
 
-    formLaminationElement.addEventListener("submit", (event) => {
+    formLaminationElement.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       const telValue = (
@@ -85,10 +90,27 @@ const lamination = () => {
         return;
       }
 
-      modalThank?.classList.add("active");
-      (event.target as HTMLFormElement).reset();
-      
-      console.log({ back, knob, telValue });
+      const formData = new FormData();
+      formData.append("action", "form_main");
+      formData.append("formName", "laminationForm");
+      formData.append("tel", telValue);
+      formData.append("back", back);
+      formData.append("knob", knob);
+
+      const {
+        data: { success, message },
+      } = await axios.post("/wp-admin/admin-ajax.php", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      if (success) {
+        modalThank?.classList.add("active");
+        (event.target as HTMLFormElement).reset();
+      } else {
+        toastr.error(message);
+      }
     });
   };
   handleSubmit();

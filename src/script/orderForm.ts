@@ -1,4 +1,5 @@
 import toastr from "toastr";
+import axios from "axios";
 
 const orderForm = () => {
   const orderButtonElements =
@@ -28,7 +29,7 @@ const orderForm = () => {
     modalOrder.classList.remove("active");
   };
 
-  orderForm.addEventListener("submit", (event: Event) => {
+  orderForm.addEventListener("submit", async (event: Event) => {
     event.preventDefault();
 
     const telValue = (
@@ -54,11 +55,26 @@ const orderForm = () => {
       return;
     }
 
-    modalOrder.classList.remove("active");
-    modalThank.classList.add("active");
-    (event.target as HTMLFormElement).reset();
+    const formData = new FormData();
+    formData.append("action", "form_main");
+    formData.append("formName", "defaultForm");
+    formData.append("tel", telValue);
 
-    console.log({ telValue });
+    const {
+      data: { success, message },
+    } = await axios.post("/wp-admin/admin-ajax.php", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+
+    if (success) {
+      modalOrder.classList.remove("active");
+      modalThank.classList.add("active");
+      (event.target as HTMLFormElement).reset();
+    } else {
+      toastr.error(message);
+    }
   });
 };
 

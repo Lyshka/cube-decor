@@ -1,8 +1,9 @@
 import Swiper from "swiper/bundle";
 import { EffectFade } from "swiper/modules";
 import toastr from "toastr";
+import axios from "axios";
 
-import { typeWindow } from "./typeWindow";
+import { TEMPLTE, typeWindow } from "./typeWindow";
 import { templateDimension } from "./templateDimension";
 
 import "swiper/css/bundle";
@@ -362,6 +363,139 @@ const quiz = () => {
   };
   selectGift();
 
+  const selectHouseCondition = () => {
+    const selectHouseSelected = (
+      document.querySelector('input[name="house"]:checked') as HTMLInputElement
+    )?.value;
+
+    if (selectHouseSelected === "house1") {
+      return "Кирпичный дом";
+    }
+
+    if (selectHouseSelected === "house2") {
+      return "Панельный дом";
+    }
+
+    if (selectHouseSelected === "house3") {
+      return "Частный дом";
+    }
+
+    if (selectHouseSelected === "house4") {
+      return "Лоджия/Балкон";
+    }
+
+    if (selectHouseSelected === "house5") {
+      return "Входная группа";
+    }
+
+    return "Кирпичный дом";
+  };
+
+  const selectedConfigure = () => {
+    const copyGlobalDimension = globalDimension.map((item) => {
+      const inputCount = document.querySelector<HTMLInputElement>(
+        `input[name="${item.name}"]`
+      )?.value;
+      const inputNotValue = document.querySelector<HTMLInputElement>(
+        `input[name="${item.name}NotValue"]`
+      )?.checked;
+
+      let size = "Я не знаю";
+
+      if (!inputNotValue && item.template === TEMPLTE.template1) {
+        const inputWidthWindowValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}WidthWindow"]`
+        )?.value;
+        const inputHeightWindowValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}HeightWindow"]`
+        )?.value;
+
+        size = `Ширина окна: ${inputWidthWindowValue} Высота окна: ${inputHeightWindowValue}`;
+      }
+
+      if (!inputNotValue && item.template === TEMPLTE.template2) {
+        const inputWidthWindowValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}WidthWindow"]`
+        )?.value;
+        const inputHeightWindowValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}HeightWindow"]`
+        )?.value;
+
+        const inputWidthDoorValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}WidthDoor"]`
+        )?.value;
+        const inputHeightDoorValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}HeightDoor"]`
+        )?.value;
+
+        size = `Ширина окна: ${inputWidthWindowValue} Высота окна: ${inputHeightWindowValue} Ширина двери: ${inputWidthDoorValue} Высота двери: ${inputHeightDoorValue}`;
+      }
+
+      if (!inputNotValue && item.template === TEMPLTE.template3) {
+        const inputWidthFrontValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}WidthFront"]`
+        )?.value;
+        const inputWidthBackValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}widthBack"]`
+        )?.value;
+        const inputHeightWindowValue = document.querySelector<HTMLInputElement>(
+          `input[name="${item.name}HeightWindow"]`
+        )?.value;
+
+        size = `Ширина фронательная: ${inputWidthFrontValue} Ширина боковая: ${inputWidthBackValue} Высота окна: ${inputHeightWindowValue}`;
+      }
+
+      item.count = inputCount;
+      item.size = size;
+
+      return item;
+    });
+
+    return copyGlobalDimension;
+  };
+
+  const selectedVariant = () => {
+    const glazingTypeValue = (
+      document.querySelector(
+        'input[name="glazingType"]:checked'
+      ) as HTMLInputElement
+    )?.value;
+
+    const finishingValue = (
+      document.querySelector(
+        'input[name="finishing"]:checked'
+      ) as HTMLInputElement
+    )?.value;
+
+    const materialValue = (
+      document.querySelector(
+        'input[name="material"]:checked'
+      ) as HTMLInputElement
+    )?.value;
+
+    const laminationValue = (
+      document.querySelector(
+        'input[name="lamination"]:checked'
+      ) as HTMLInputElement
+    )?.value;
+
+    return `Тип остекления: ${glazingTypeValue} ${
+      materialValue
+        ? `Материал: ${materialValue}`
+        : `Отделка: ${finishingValue}`
+    } Ламинация: ${laminationValue}`;
+  };
+
+  const selectedGift = () => {
+    const selectGiftSelected = (
+      document.querySelector('input[name="gift"]:checked') as HTMLInputElement
+    )?.value;
+
+    if (!selectGiftSelected) return "Набор по уходу за окнами";
+
+    return selectGiftSelected;
+  };
+
   const submit = () => {
     const QuizForm = document.getElementById("QuizForm") as HTMLFormElement;
     const slideSubmitElement = document.getElementById(
@@ -394,7 +528,7 @@ const quiz = () => {
       }
     };
 
-    QuizForm.onsubmit = (event) => {
+    QuizForm.onsubmit = async (event) => {
       event.preventDefault();
       const isConf = (
         (event.target as HTMLFormElement).elements.namedItem(
@@ -402,15 +536,10 @@ const quiz = () => {
         ) as HTMLInputElement
       ).checked;
       const telLength = telInput.value.length;
-      const timeCallInputLength = timeCallInput.value.length;
+      // const timeCallInputLength = timeCallInput.value.length;
 
       if (telLength < 12) {
         toastr.error("Номер телефона не правильный!");
-        return;
-      }
-
-      if (timeCallInputLength < 2) {
-        toastr.error("Не правильное время для связи");
         return;
       }
 
@@ -429,9 +558,35 @@ const quiz = () => {
         ) as HTMLInputElement
       ).value;
 
-      sliderQuiz.slideTo(9);
+      const selectedHouse = selectHouseCondition();
+      const configure = JSON.stringify(selectedConfigure());
+      const variants = selectedVariant();
+      const gift = selectedGift();
 
-      console.log({telValue, timeCallValue, selectSocialValue})
+      const formData = new FormData();
+      formData.append("action", "form_main");
+      formData.append("formName", "quizForm");
+      formData.append("tel", telValue);
+      formData.append("timeCall", timeCallValue);
+      formData.append("social", selectSocialValue);
+      formData.append("house", selectedHouse);
+      formData.append("configure", configure);
+      formData.append("variants", variants);
+      formData.append("gift", gift);
+
+      const {
+        data: { success, message },
+      } = await axios.post("/wp-admin/admin-ajax.php", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      if (success) {
+        sliderQuiz.slideTo(9);
+      } else {
+        toastr.error(message);
+      }
     };
   };
 

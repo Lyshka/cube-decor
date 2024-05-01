@@ -1,3 +1,4 @@
+import axios from "axios";
 import toastr from "toastr";
 
 const defaultFormSubmit = () => {
@@ -8,7 +9,7 @@ const defaultFormSubmit = () => {
   ) as HTMLElement;
 
   formDefaultElements.forEach((formDefaultElement) => {
-    formDefaultElement.addEventListener("submit", (event: Event) => {
+    formDefaultElement.addEventListener("submit", async (event: Event) => {
       event.preventDefault();
 
       const telValue = (
@@ -22,10 +23,25 @@ const defaultFormSubmit = () => {
         return;
       }
 
-      modalThankElement.classList.add("active");
-      (event.target as HTMLFormElement).reset();
+      const formData = new FormData();
+      formData.append("action", "form_main");
+      formData.append("formName", "defaultForm");
+      formData.append("tel", telValue);
 
-      console.log({ telValue });
+      const {
+        data: { success, message },
+      } = await axios.post("/wp-admin/admin-ajax.php", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      if (success) {
+        modalThankElement.classList.add("active");
+        (event.target as HTMLFormElement).reset();
+      } else {
+        toastr.error(message);
+      }
     });
   });
 };

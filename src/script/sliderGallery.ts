@@ -83,9 +83,6 @@ const selectImg = () => {
         const imgSrc = minImg.src;
 
         minImg.onclick = () => {
-          console.log(minImgElements)
-          console.log(imgSrc)
-          console.log(bigImg)
           bigImg.src = imgSrc;
         };
       });
