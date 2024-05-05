@@ -479,11 +479,11 @@ const quiz = () => {
       ) as HTMLInputElement
     )?.value;
 
-    return `Тип остекления: ${glazingTypeValue} ${
+    return `<b>Тип остекления:</b> ${glazingTypeValue}\n${
       materialValue
-        ? `Материал: ${materialValue}`
-        : `Отделка: ${finishingValue}`
-    } Ламинация: ${laminationValue}`;
+        ? `<b>Материал:</b>${materialValue}\n`
+        : `<b>Отделка:</b>${finishingValue}\n`
+    }<b>Ламинация:</b>${laminationValue}`;
   };
 
   const selectedGift = () => {
@@ -559,33 +559,49 @@ const quiz = () => {
       ).value;
 
       const selectedHouse = selectHouseCondition();
-      const configure = JSON.stringify(selectedConfigure());
       const variants = selectedVariant();
       const gift = selectedGift();
+      const configure = selectedConfigure();
 
-      const formData = new FormData();
-      formData.append("action", "form_main");
-      formData.append("formName", "quizForm");
-      formData.append("tel", telValue);
-      formData.append("timeCall", timeCallValue);
-      formData.append("social", selectSocialValue);
-      formData.append("house", selectedHouse);
-      formData.append("configure", configure);
-      formData.append("variants", variants);
-      formData.append("gift", gift);
+      let configureString = "";
+      configure.map((item) => {
+        let title = item.title;
+        let count = item.count;
+        let size = item.size;
+
+        configureString += "<b>Название:</b> " + title + "\n";
+        configureString += "<b>Количество:</b> " + count + "\n";
+        configureString += "<b>Размеры:</b> " + size + "\n";
+        configureString += "*******************" + "\n";
+      });
+
+      // Replace <br/> tags with an empty string
+      configureString = configureString.replace(/<br\/>/g, "");
 
       const {
-        data: { success, message },
-      } = await axios.post("/wp-admin/admin-ajax.php", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+        data: { ok: success },
+      } = await axios.post(
+        "https://api.telegram.org/bot6743627714:AAGDu7djoYQN7ZsIFqjUFRULxJRbYfC67r8/sendMessage",
+        {
+          chat_id: -4231881637,
+          text: `
+<b>Телефон: </b>${telValue}
+<b>Тип дома: </b>${selectedHouse}
+<b>Конфигурация: </b>
+${configureString}
+${variants}
+<b>Подарок: </b>${gift}
+<b>Врем для связи: </b>${timeCallValue}
+<b>Соц. сеть: </b>${selectSocialValue}
+`,
+          parse_mode: "html",
+        }
+      );
 
       if (success) {
         sliderQuiz.slideTo(9);
       } else {
-        toastr.error(message);
+        toastr.error("Произошла ошибка при отправке!");
       }
     };
   };

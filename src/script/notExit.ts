@@ -1,5 +1,5 @@
 import toastr from "toastr";
-import axios from "axios"
+import axios from "axios";
 
 const notExit = () => {
   const modalNotExitElement = document.getElementById("modalNotExit");
@@ -55,26 +55,27 @@ const notExit = () => {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("action", "form_main");
-    formData.append("formName", "notExitForm");
-    formData.append("tel", telValue);
-    formData.append("called", calledValue);
-
     const {
-      data: { success, message },
-    } = await axios.post("/wp-admin/admin-ajax.php", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+      data: { ok: success },
+    } = await axios.post(
+      "https://api.telegram.org/bot6743627714:AAGDu7djoYQN7ZsIFqjUFRULxJRbYfC67r8/sendMessage",
+      {
+        chat_id: -4231881637,
+        text: `
+<b>Отправить полезное пособие</b>
+<b>Телефон: </b>${telValue}
+<b>Соц. сеть: </b>${calledValue}
+`,
+        parse_mode: "html",
+      }
+    );
 
     if (success) {
       modalNotExitElement?.classList.remove("active");
       modalThank?.classList.add("active");
       (event.target as HTMLFormElement).reset();
     } else {
-      toastr.error(message);
+      toastr.error("Произошла ошибка при отправке!");
     }
   });
 };
