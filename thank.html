@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <main
+      class="xl:bg-[url('bgThankPage.webp')] bg-[url('bgThankPageMobile.webp')] h-screen bg-cover bg-no-repeat relative flex justify-center items-center flex-col"
+    >
+      <div class="flex justify-center items-center gap-5 flex-col xl:px-0 px-2.5 w-full">
+        <h2 class="text-center">Спасибо за вашу заявку!</h2>
+
+        <p
+          class="text-center xl:text-[26px] text-sm xl:leading-[33.8px] leading-[17.07px] xl:font-normal font-light"
+        >
+          Мы скоро свяжемся с вами
+        </p>
+
+        <a href="/" class="xl:w-[288px] w-full">
+          <button
+            class="bg-secondary w-full xl:h-[60px] h-10 font-semibold xl:text-lg text-base xl:leading-[21.94px] leading-[20.8px] text-white"
+          >
+            Вернуться на страницу
+          </button>
+        </a>
+      </div>
+
+      <img
+        class="custom:max-w-[978px] xl:max-w-[800px] sm:max-w-[600px] custom:h-[754px] xl:h-[600px] right-0 bottom-0 xl:absolute static"
+        src="thankPageDirector.webp"
+        alt="Руководитель"
+      />
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

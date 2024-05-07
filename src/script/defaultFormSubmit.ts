@@ -4,9 +4,9 @@ import toastr from "toastr";
 const defaultFormSubmit = () => {
   const formDefaultElements =
     document.querySelectorAll<HTMLFormElement>(".defaultForm");
-  const modalThankElement = document.getElementById(
-    "modalThank"
-  ) as HTMLElement;
+  // const modalThankElement = document.getElementById(
+  //   "modalThank"
+  // ) as HTMLElement;
 
   formDefaultElements.forEach((formDefaultElement) => {
     formDefaultElement.addEventListener("submit", async (event: Event) => {
@@ -24,9 +24,7 @@ const defaultFormSubmit = () => {
       }
 
       const {
-        data: {
-          ok: success,
-        },
+        data: { ok: success },
       } = await axios.post(
         "https://api.telegram.org/bot6743627714:AAGDu7djoYQN7ZsIFqjUFRULxJRbYfC67r8/sendMessage",
         {
@@ -37,7 +35,8 @@ const defaultFormSubmit = () => {
       );
 
       if (success) {
-        modalThankElement.classList.add("active");
+        // modalThankElement.classList.add("active");
+        window.location.href = "/straniczablagodarnosti";
         (event.target as HTMLFormElement).reset();
       } else {
         toastr.error("Произошла ошибка при отправке!");

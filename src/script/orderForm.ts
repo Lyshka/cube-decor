@@ -9,7 +9,7 @@ const orderForm = () => {
     ".titleOrderForm"
   ) as HTMLElement;
   const orderForm = document.getElementById("orderForm") as HTMLFormElement;
-  const modalThank = document.getElementById("modalThank") as HTMLElement;
+  // const modalThank = document.getElementById("modalThank") as HTMLElement;
 
   orderButtonElements.forEach((orderButton) => {
     const title = orderButton.dataset["title"] as string;
@@ -68,7 +68,8 @@ const orderForm = () => {
 
     if (success) {
       modalOrder.classList.remove("active");
-      modalThank.classList.add("active");
+      // modalThank.classList.add("active");
+      window.location.href = "/straniczablagodarnosti";
       (event.target as HTMLFormElement).reset();
     } else {
       toastr.error("Произошла ошибка при отправке!");

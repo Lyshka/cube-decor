@@ -74,7 +74,7 @@ const lamination = () => {
     const formLaminationElement = document.getElementById(
       "formLamination"
     ) as HTMLFormElement;
-    const modalThank = document.getElementById("modalThank");
+    // const modalThank = document.getElementById("modalThank");
 
     formLaminationElement.addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -106,7 +106,8 @@ const lamination = () => {
       );
 
       if (success) {
-        modalThank?.classList.add("active");
+        // modalThank?.classList.add("active");
+        window.location.href = "/straniczablagodarnosti";
         (event.target as HTMLFormElement).reset();
       } else {
         toastr.error("Произошла ошибка при отправке!");

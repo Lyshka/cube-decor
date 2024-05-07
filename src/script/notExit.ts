@@ -8,7 +8,7 @@ const notExit = () => {
   ) as HTMLButtonElement;
   const body = document.querySelector("body") as HTMLBodyElement;
   const notExitForm = document.getElementById("notExitForm") as HTMLFormElement;
-  const modalThank = document.getElementById("modalThank") as HTMLElement;
+  // const modalThank = document.getElementById("modalThank") as HTMLElement;
 
   let counter = 0;
 
@@ -72,7 +72,8 @@ const notExit = () => {
 
     if (success) {
       modalNotExitElement?.classList.remove("active");
-      modalThank?.classList.add("active");
+      // modalThank?.classList.add("active");
+      window.location.href = "/straniczablagodarnosti";
       (event.target as HTMLFormElement).reset();
     } else {
       toastr.error("Произошла ошибка при отправке!");

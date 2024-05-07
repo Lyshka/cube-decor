@@ -599,7 +599,8 @@ ${variants}
       );
 
       if (success) {
-        sliderQuiz.slideTo(9);
+        // sliderQuiz.slideTo(9);
+        window.location.href = "/straniczablagodarnosti";
       } else {
         toastr.error("Произошла ошибка при отправке!");
       }
