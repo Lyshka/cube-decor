@@ -63,6 +63,24 @@ const selectGallery = () => {
 };
 selectGallery();
 
+const preloadImages = () => {
+  const allGallerySlidesElements =
+    document.querySelectorAll<HTMLElement>(".swiper-slide");
+
+  allGallerySlidesElements.forEach((GallerySlideElement) => {
+    const minImgElements =
+      GallerySlideElement.querySelectorAll<HTMLImageElement>(".minImg");
+
+    minImgElements.forEach((minImg) => {
+      const imgSrc = minImg.src;
+      const img = new Image();
+      img.src = imgSrc;
+    });
+  });
+};
+
+preloadImages();
+
 const selectImg = () => {
   const AllGalleryElements =
     document.querySelectorAll<HTMLElement>(".sliderGallery");
