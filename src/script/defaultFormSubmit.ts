@@ -18,6 +18,12 @@ const defaultFormSubmit = () => {
         ) as HTMLInputElement
       ).value;
 
+      const targetValue = (
+        (event.target as HTMLFormElement).elements.namedItem(
+          "target"
+        ) as HTMLInputElement
+      ).value;
+
       if (telValue.length < 12) {
         toastr.error("Номер телефона не правильный!");
         return;
@@ -29,7 +35,10 @@ const defaultFormSubmit = () => {
         "https://api.telegram.org/bot6743627714:AAGDu7djoYQN7ZsIFqjUFRULxJRbYfC67r8/sendMessage",
         {
           chat_id: -4231881637,
-          text: `<b>Телефон: </b>${telValue}`,
+          text: `
+<b>Цель заявки: </b> ${targetValue}
+<b>Телефон: </b>${telValue}
+`,
           parse_mode: "html",
         }
       );

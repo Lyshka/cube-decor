@@ -61,7 +61,10 @@ const orderForm = () => {
       "https://api.telegram.org/bot6743627714:AAGDu7djoYQN7ZsIFqjUFRULxJRbYfC67r8/sendMessage",
       {
         chat_id: -4231881637,
-        text: `<b>Телефон: </b>${telValue}`,
+        text: `
+<b>Цель заявки: </b>Заказать окно
+<b>Телефон: </b>${telValue}
+        `,
         parse_mode: "html",
       }
     );
