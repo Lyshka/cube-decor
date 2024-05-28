@@ -43,6 +43,8 @@ const orderForm = () => {
       ) as HTMLInputElement
     ).checked;
 
+    const product = document.querySelector(".titleOrderForm")?.textContent;
+
     if (telValue.length < 12) {
       toastr.error("Номер телефона не правильный!");
       return;
@@ -62,7 +64,7 @@ const orderForm = () => {
       {
         chat_id: -4231881637,
         text: `
-<b>Цель заявки: </b>Заказать окно
+<b>Цель заявки: </b>${product}
 <b>Телефон: </b>${telValue}
         `,
         parse_mode: "html",
