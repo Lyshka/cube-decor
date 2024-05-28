@@ -96,7 +96,26 @@ const quiz = () => {
     });
 
     nextButton.addEventListener("click", () => {
+      const selectedHouseValue = (
+        document.querySelector(
+          ".inputSelectHouse[type='radio']:checked"
+        ) as HTMLInputElement
+      ).value;
+
+      if (selectedHouseValue === "house4") {
+        sliderQuiz.slideTo(2);
+        prevConfigureSlide = 2;
+        return;
+      }
+
+      if (selectedHouseValue === "house5") {
+        sliderQuiz.slideTo(3);
+        prevConfigureSlide = 3;
+        return;
+      }
+
       sliderQuiz.slideTo(1);
+      prevConfigureSlide = 1;
     });
   };
 
