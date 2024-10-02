@@ -301,42 +301,34 @@ const quiz = () => {
 
     nextVariantElements.forEach((prevVariantElement) => {
       prevVariantElement.onclick = () => {
-        const glazingType = (
-          document.querySelector(
-            'input.inputValueCardVariant[name="glazingType"]:checked'
-          ) as HTMLInputElement
-        )?.value;
+        // const glazingType = (
+        //   document.querySelector(
+        //     'input.inputValueCardVariant[name="glazingType"]:checked'
+        //   ) as HTMLInputElement
+        // )?.value;
 
-        const finishing = (
-          document.querySelector(
-            'input.inputValueCardVariant[name="finishing"]:checked'
-          ) as HTMLInputElement
-        )?.value;
+        // const finishing = (
+        //   document.querySelector(
+        //     'input.inputValueCardVariant[name="finishing"]:checked'
+        //   ) as HTMLInputElement
+        // )?.value;
 
-        const lamination = (
-          document.querySelector(
-            'input.inputValueCardVariant[name="lamination"]:checked'
-          ) as HTMLInputElement
-        )?.value;
+        // const lamination = (
+        //   document.querySelector(
+        //     'input.inputValueCardVariant[name="lamination"]:checked'
+        //   ) as HTMLInputElement
+        // )?.value;
 
-        const material = (
-          document.querySelector(
-            'input.inputValueCardVariant[name="material"]:checked'
-          ) as HTMLInputElement
-        )?.value;
+        // const material = (
+        //   document.querySelector(
+        //     'input.inputValueCardVariant[name="material"]:checked'
+        //   ) as HTMLInputElement
+        // )?.value;
 
         if (prevConfigureSlide === 3) {
-          if (!glazingType || !material || !lamination) {
-            toastr.warning("Вы ответили не на все вопросы!");
-          } else {
-            sliderQuiz.slideTo(7);
-          }
+          sliderQuiz.slideTo(7);
         } else {
-          if (!glazingType || !finishing || !lamination) {
-            toastr.warning("Вы ответили не на все вопросы!");
-          } else {
-            sliderQuiz.slideTo(7);
-          }
+          sliderQuiz.slideTo(7);
         }
       };
     });
